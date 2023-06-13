@@ -23,7 +23,8 @@ final List<ModelOnBoarding> onBoarding = [
     width2: 15,
     width3: 15,
     title: 'Enim Lobortis',
-    subTitle: 'Program Extended Warranty Terbaru Dari UT dan Komatsu',
+    subTitle:
+        'Program Extended Warranty Terbaru Dari United Tractors dan Komatsu',
   )),
   (ModelOnBoarding(
     image: 'assets/images/on-boarding/onBoarding2.png',

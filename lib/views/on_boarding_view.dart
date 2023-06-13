@@ -48,7 +48,10 @@ class _OnBoardingState extends State<OnBoarding> {
                     SizedBox(
                       height: 350,
                       width: double.infinity,
-                      child: Image.asset(onBoarding[index].image),
+                      child: Image.asset(
+                        onBoarding[index].image,
+                        height: 300,
+                      ),
                       // color: ColorPallete.box,
                       // decoration: BoxDecoration(
                       //   image: DecorationImage(
@@ -111,7 +114,7 @@ class _OnBoardingState extends State<OnBoarding> {
                           fontSize: 24, fontWeight: FontWeight.w200),
                     ),
                     const SizedBox(
-                      height: 80,
+                      height: 50,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
