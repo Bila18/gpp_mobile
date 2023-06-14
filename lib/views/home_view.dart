@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:gpp_mobile/models/spare_parts.dart';
+import 'package:gpp_mobile/utils/widgets.dart';
 import 'package:gpp_mobile/views/info_gpt_view.dart';
 import '../utils/color_pallete.dart';
 import '../utils/spare_part_card.dart';
 import '../utils/tips_trik_card.dart';
+import 'login_view.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -25,7 +27,101 @@ class _HomeViewState extends State<HomeView> {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (context) => SizedBox(
+                  height: 300,
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(top: 10, bottom: 20),
+                        child: Container(
+                          height: 10,
+                          width: 120,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.grey,
+                          ),
+                        ),
+                      ),
+                      const Divider(
+                        indent: 30,
+                        endIndent: 30,
+                        thickness: 1.5,
+                      ),
+                      ListTile(
+                        onTap: () {
+                          // Navigator.push(
+                          //   context,
+                          //   MaterialPageRoute(
+                          //     builder: (context) => const EditProfileView(),
+                          //   ),
+                          // );
+                        },
+                        contentPadding: const EdgeInsets.fromLTRB(45, 0, 40, 0),
+                        leading: const Icon(
+                          Icons.drive_file_rename_outline_outlined,
+                          color: Colors.black,
+                        ),
+                        title: const Text(
+                          'Edit Profil',
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                        trailing: const Icon(
+                          Icons.arrow_forward_ios_outlined,
+                          color: Colors.black,
+                        ),
+                        dense: true,
+                        visualDensity:
+                            const VisualDensity(vertical: -4, horizontal: -4),
+                      ),
+                      const Divider(
+                        indent: 30,
+                        endIndent: 30,
+                        thickness: 1.5,
+                      ),
+                      ListTile(
+                        onTap: () {
+                          popUp(context, 'assets/images/logout.png',
+                              'Apakah anda yakin ingin keluar?', () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const LoginView(),
+                              ),
+                            );
+                          });
+                        },
+                        contentPadding: const EdgeInsets.fromLTRB(45, 0, 40, 0),
+                        leading: const Icon(
+                          Icons.logout_rounded,
+                          color: Colors.black,
+                        ),
+                        title: const Text(
+                          'Keluar Akun',
+                          style: TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.bold),
+                        ),
+                        trailing: const Icon(
+                          Icons.arrow_forward_ios_outlined,
+                          color: Colors.black,
+                        ),
+                        dense: true,
+                        visualDensity:
+                            const VisualDensity(vertical: -4, horizontal: -4),
+                      ),
+                    ],
+                  ),
+                ),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(20),
+                  ),
+                ),
+              );
+            },
             icon: const Icon(
               Icons.account_circle_outlined,
               color: Colors.black,
