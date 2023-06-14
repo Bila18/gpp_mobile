@@ -21,7 +21,7 @@ class _HomeViewState extends State<HomeView> {
           'Hi, Nabila!',
           style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: ColorPallete.primary,
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
