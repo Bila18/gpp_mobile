@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gpp_mobile/views/home_view.dart';
 import 'package:gpp_mobile/views/register_view.dart';
 
 import '../utils/color_pallete.dart';
@@ -145,7 +146,14 @@ class _LoginViewState extends State<LoginView> {
                 height: 150,
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const HomeView(),
+                    ),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
                   fixedSize: const Size(350, 50),
                   backgroundColor: ColorPallete.primary,
