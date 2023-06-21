@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gpp_mobile/models/spare_parts.dart';
 import 'package:gpp_mobile/utils/widgets.dart';
 import 'package:gpp_mobile/views/info_gpt_view.dart';
+import 'package:gpp_mobile/views/profil_view.dart';
 import '../utils/color_pallete.dart';
 import '../utils/spare_part_card.dart';
 import '../utils/tips_trik_card.dart';
@@ -52,12 +53,12 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       ListTile(
                         onTap: () {
-                          // Navigator.push(
-                          //   context,
-                          //   MaterialPageRoute(
-                          //     builder: (context) => const EditProfileView(),
-                          //   ),
-                          // );
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ProfileView(),
+                            ),
+                          );
                         },
                         contentPadding: const EdgeInsets.fromLTRB(45, 0, 40, 0),
                         leading: const Icon(

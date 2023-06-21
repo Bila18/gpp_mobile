@@ -74,3 +74,46 @@ void popUp(BuildContext context, String img, String title,
     },
   );
 }
+
+void popUpOk(BuildContext context, String img, String title,
+    void Function() onTap) async {
+  showDialog(
+    context: context,
+    builder: (context) {
+      return AlertDialog(
+        content: Column(mainAxisSize: MainAxisSize.min, children: [
+          Image.asset(
+            img,
+            height: 250,
+            width: 250,
+          ),
+          Text(
+            title,
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+          )
+        ]),
+        actions: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                TextButton(
+                  onPressed: onTap,
+                  child: const Text(
+                    'Ya',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      );
+    },
+  );
+}
