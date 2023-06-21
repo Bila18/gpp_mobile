@@ -167,7 +167,7 @@ class _LoginViewState extends State<LoginView> {
                     'Masuk',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 24,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold),
                   ),
                 ),

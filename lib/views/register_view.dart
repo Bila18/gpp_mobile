@@ -294,7 +294,7 @@ class _RegisterViewState extends State<RegisterView> {
                     'Daftar',
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 24,
+                        fontSize: 18,
                         fontWeight: FontWeight.bold),
                   ),
                 ),

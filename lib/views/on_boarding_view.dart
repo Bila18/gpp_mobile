@@ -102,7 +102,7 @@ class _OnBoardingState extends State<OnBoarding> {
                     Text(
                       onBoarding[index].title,
                       style: const TextStyle(
-                          fontSize: 36, fontWeight: FontWeight.bold),
+                          fontSize: 30, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(
                       height: 20,
@@ -111,7 +111,7 @@ class _OnBoardingState extends State<OnBoarding> {
                       onBoarding[index].subTitle,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
-                          fontSize: 24, fontWeight: FontWeight.w200),
+                          fontSize: 20, fontWeight: FontWeight.w200),
                     ),
                     const SizedBox(
                       height: 50,
