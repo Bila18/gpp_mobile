@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:gpp_mobile/models/spare_parts.dart';
 import 'package:gpp_mobile/utils/widgets.dart';
 import 'package:gpp_mobile/views/info_gpt_view.dart';
+import 'package:gpp_mobile/views/periodical_service/periodical_service_view.dart';
 import 'package:gpp_mobile/views/profil_view.dart';
 import 'package:gpp_mobile/views/spare_part_view.dart';
 import '../utils/color_pallete.dart';
@@ -184,18 +185,29 @@ class _HomeViewState extends State<HomeView> {
                       const SizedBox(
                         width: 10,
                       ),
-                      Container(
-                        height: 50,
-                        width: 135,
-                        decoration: BoxDecoration(
-                            color: ColorPallete.box,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: const Center(
-                          child: Text(
-                            'Periodical Service',
-                            style: TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  const PeriodicalServiceView(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          height: 50,
+                          width: 135,
+                          decoration: BoxDecoration(
+                              color: ColorPallete.box,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: const Center(
+                            child: Text(
+                              'Periodical Service',
+                              style: TextStyle(
+                                fontSize: 16,
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                         ),
