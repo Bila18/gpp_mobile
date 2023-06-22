@@ -3,6 +3,7 @@ import 'package:gpp_mobile/models/spare_parts.dart';
 import 'package:gpp_mobile/utils/widgets.dart';
 import 'package:gpp_mobile/views/info_gpt_view.dart';
 import 'package:gpp_mobile/views/profil_view.dart';
+import 'package:gpp_mobile/views/spare_part_view.dart';
 import '../utils/color_pallete.dart';
 import '../utils/spare_part_card.dart';
 import '../utils/tips_trik_card.dart';
@@ -221,7 +222,14 @@ class _HomeViewState extends State<HomeView> {
                         ),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const SparePartView(),
+                            ),
+                          );
+                        },
                         child: Text(
                           'Lihat Semua',
                           style: TextStyle(
