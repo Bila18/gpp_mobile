@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gpp_mobile/models/spare_parts.dart';
+import 'package:gpp_mobile/models/tips_trik.dart';
 import 'package:gpp_mobile/utils/widgets.dart';
 import 'package:gpp_mobile/views/info_gpt_view.dart';
 import 'package:gpp_mobile/views/periodical_service/periodical_service_view.dart';
@@ -8,6 +9,8 @@ import 'package:gpp_mobile/views/spare_part_view.dart';
 import '../utils/color_pallete.dart';
 import '../utils/spare_part_card.dart';
 import '../utils/tips_trik_card.dart';
+import 'detail_spare_part.dart';
+import 'detail_tips_trik.dart';
 import 'login_view.dart';
 
 class HomeView extends StatefulWidget {
@@ -264,7 +267,19 @@ class _HomeViewState extends State<HomeView> {
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           shrinkWrap: true,
-                          itemBuilder: (context, index) => SparePartCard(index),
+                          itemBuilder: (context, index) => InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => DetailSpareParts(
+                                    spareParts.elementAt(index),
+                                  ),
+                                ),
+                              );
+                            },
+                            child: SparePartCard(index),
+                          ),
                           itemCount: spareParts.length,
                         ),
                       ),
@@ -295,7 +310,18 @@ class _HomeViewState extends State<HomeView> {
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: 4,
-                        itemBuilder: (context, index) => TipsTrikCard(index),
+                        itemBuilder: (context, index) => InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => DetailTipsview(
+                                    tipsTrik.elementAt(index),
+                                  ),
+                                ),
+                              );
+                            },
+                            child: TipsTrikCard(index)),
                       ),
                     ))
                   ],

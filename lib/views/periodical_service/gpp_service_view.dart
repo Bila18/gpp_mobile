@@ -1,7 +1,5 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:gpp_mobile/models/periode_service.dart';
-import 'package:gpp_mobile/models/spare_parts.dart';
 import 'package:gpp_mobile/utils/color_pallete.dart';
 import 'package:gpp_mobile/views/periodical_service/service_report_view.dart';
 
