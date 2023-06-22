@@ -47,6 +47,7 @@ class BoxTextField extends StatelessWidget {
           borderRadius: BorderRadius.circular(10),
         ),
       ),
+      validator: validator,
     );
   }
 }
